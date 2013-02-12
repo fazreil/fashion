@@ -4,6 +4,7 @@ import my.android.fazreil.catalog.util.SystemUiHider;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -141,6 +142,8 @@ public class Cover extends Activity {
 		public boolean onTouch(View view, MotionEvent motionEvent) {
 			Toast.makeText(getApplicationContext(), "wow!", Toast.LENGTH_SHORT).show();
 			System.out.println("toast");
+			Intent menuIntent = new Intent(Cover.this, Menu.class);
+			startActivity(menuIntent);
 			if (AUTO_HIDE) {
 				delayedHide(AUTO_HIDE_DELAY_MILLIS);
 			}
