@@ -51,18 +51,13 @@ public class Cover extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
 		setContentView(R.layout.activity_cover);
-
 		final View contentView = findViewById(R.id.fullscreen_content);
-
 
 		// Upon interacting with UI controls, delay any scheduled hide()
 		// operations to prevent the jarring behavior of controls going away
 		// while interacting with the UI.
 		findViewById(R.id.fullscreen_content).setOnTouchListener(
-				mDelayHideTouchListener);
-		findViewById(R.id.frame_layout_2).setOnTouchListener(
 				mDelayHideTouchListener);
 	}
 

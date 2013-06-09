@@ -3,38 +3,14 @@
     android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fashion_blurred"
     android:orientation="vertical"
     tools:context=".Menu" >
 
-    <!--  
-    -->
-
-    <TextView
-        android:id="@+id/greeting"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:background="@drawable/fashion"
-        android:paddingTop="@dimen/cover_top_padding"
-        android:shadowColor="@android:color/darker_gray"
-        android:shadowDx="15"
-        android:shadowDy="10"
-        android:shadowRadius="10"
-        android:text="@string/hi"
-        android:textAllCaps="false"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="@android:color/primary_text_light"
-        android:textStyle="bold" >
-
-    </TextView>
-
-
-<!-- 
-     <ImageView
-        android:id="@+id/imageView1"
+    <ListView
+        android:id="@+id/listView1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:contentDescription="@string/imageDesc"
-        android:src="@drawable/fashion" />
- -->
+        android:layout_height="wrap_content" >
+    </ListView>
 
 </LinearLayout>
