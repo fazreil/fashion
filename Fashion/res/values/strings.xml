@@ -8,6 +8,7 @@
     <string name="imageDesc">an image</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
     <string name="dummy_button">Dummy Button</string>
-    <string name="title_activity_cover">Welcome!</string>
+    <string name="title_activity_cover">Fashioniata</string>
     <string name="title_activity_detail">Detail</string>
+    <string name="contentDescription">Sample Image</string>
 </resources>

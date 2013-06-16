@@ -1,17 +1,15 @@
 package my.android.fazreil.catalog;
 
+
 import my.android.fazreil.catalog.util.SystemUiHider;
 
-import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
-import android.widget.Toast;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -60,6 +58,13 @@ public class Cover extends Activity {
 		findViewById(R.id.fullscreen_content).setOnTouchListener(
 				mDelayHideTouchListener);
 	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.menu, menu);
+		return true;
+	}
 
 	@Override
 	protected void onPostCreate(Bundle savedInstanceState) {
@@ -74,9 +79,8 @@ public class Cover extends Activity {
 	View.OnTouchListener mDelayHideTouchListener = new View.OnTouchListener() {
 		@Override
 		public boolean onTouch(View view, MotionEvent motionEvent) {
-			Toast.makeText(getApplicationContext(), "wow!", Toast.LENGTH_SHORT).show();
 			System.out.println("toast");
-			Intent menuIntent = new Intent(Cover.this, Menu.class);
+			Intent menuIntent = new Intent(Cover.this, my.android.fazreil.catalog.Menu.class);
 			startActivity(menuIntent);
 			if (AUTO_HIDE) {
 				delayedHide(AUTO_HIDE_DELAY_MILLIS);
@@ -100,4 +104,5 @@ public class Cover extends Activity {
 		mHideHandler.removeCallbacks(mHideRunnable);
 		mHideHandler.postDelayed(mHideRunnable, delayMillis);
 	}
+	
 }
